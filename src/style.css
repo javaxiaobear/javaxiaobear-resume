@@ -1,0 +1,143 @@
+:root {
+  /* Theme color variables with default values */
+  --primary-color: #1677ff;
+  --heading-color: #2f4e57;
+  --text-color: #475b63;
+  --background-color: #ffffff;
+  --accent-color: #52c41a;
+  --font-family: 'Arial', sans-serif;
+  --font-size: 14px;
+  --border-radius: 4px;
+
+  /* Spacing variables */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Other variables */
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --transition-speed: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: #f5f7f9;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  font-family: var(--font-family);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Apply theme to Ant Design components */
+.ant-btn-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.ant-radio-button-checked {
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: var(--primary-color) !important;
+}
+
+.ant-tabs-ink-bar {
+  background-color: var(--primary-color) !important;
+}
+
+.ant-slider-track {
+  background-color: var(--primary-color) !important;
+}
+
+.ant-slider-handle {
+  border-color: var(--primary-color) !important;
+}
+
+/* Spacing utility classes */
+.mt-xs { margin-top: var(--spacing-xs); }
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
+
+.mb-xs { margin-bottom: var(--spacing-xs); }
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+
+.mx-xs { margin-left: var(--spacing-xs); margin-right: var(--spacing-xs); }
+.mx-sm { margin-left: var(--spacing-sm); margin-right: var(--spacing-sm); }
+.mx-md { margin-left: var(--spacing-md); margin-right: var(--spacing-md); }
+.mx-lg { margin-left: var(--spacing-lg); margin-right: var(--spacing-lg); }
+.mx-xl { margin-left: var(--spacing-xl); margin-right: var(--spacing-xl); }
+
+.my-xs { margin-top: var(--spacing-xs); margin-bottom: var(--spacing-xs); }
+.my-sm { margin-top: var(--spacing-sm); margin-bottom: var(--spacing-sm); }
+.my-md { margin-top: var(--spacing-md); margin-bottom: var(--spacing-md); }
+.my-lg { margin-top: var(--spacing-lg); margin-bottom: var(--spacing-lg); }
+.my-xl { margin-top: var(--spacing-xl); margin-bottom: var(--spacing-xl); }
+
+.p-xs { padding: var(--spacing-xs); }
+.p-sm { padding: var(--spacing-sm); }
+.p-md { padding: var(--spacing-md); }
+.p-lg { padding: var(--spacing-lg); }
+.p-xl { padding: var(--spacing-xl); }
+
+/* Layout spacing based on theme setting */
+[data-spacing="compact"] .content-spacing {
+  padding: var(--spacing-sm);
+  gap: var(--spacing-sm);
+}
+
+[data-spacing="normal"] .content-spacing {
+  padding: var(--spacing-md);
+  gap: var(--spacing-md);
+}
+
+[data-spacing="spacious"] .content-spacing {
+  padding: var(--spacing-lg);
+  gap: var(--spacing-lg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  :root {
+    --spacing-lg: 20px;
+    --spacing-xl: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --spacing-md: 12px;
+    --spacing-lg: 16px;
+    --spacing-xl: 24px;
+  }
+}
